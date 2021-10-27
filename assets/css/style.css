@@ -1,0 +1,18 @@
+.imgNav{
+    height: 60px;
+    width: 60px;
+
+}
+
+.imgBody{
+    height: 30%;
+    width: 30%;
+}
+
+body{
+    background-image: linear-gradient(white,white,white,white,white,#f7e81be1) ;
+}
+
+nav{
+    background-color: #f7e81be1;
+}
