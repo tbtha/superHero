@@ -38,22 +38,18 @@ pintarElementos(data)
   }//sucess
  
 });//ajax
-  } else{(alert("ingresa un numero valido"))};//if
+  } else{(alert("ingresa un numero valido"))
+};//if
  
 });//botom
 
 
 const pintarElementos = data => {
-  // console.log(Object.keys(data.powerstats))
-  // console.log(Object.values(data.powerstats))
-  console.log(data.powerstats)
+ 
 
-  //de objeto a array con propiedad y valor 
-  const dataArray =  Object.entries(data.powerstats)
-  console.log(dataArray)
 
-  // const dataPoints = 
- //???? como ingresar propiedades y valores en la 
+const valoresY = Object.values(data.powerstats)
+
 
   const options = {
     title: {
@@ -69,13 +65,12 @@ const pintarElementos = data => {
       indexLabelFontSize: 16,
       indexLabel: "{label}  - {y}%",  //valor estatico en la pantalla 
       dataPoints: [
-        { y: 48.36, label: "Windows 7" },
-        { y: 26.85, label: "Windows 10" },
-        { y: 1.49, label: "Windows 8" },
-        { y: 6.98, label: "Windows XP" },
-        { y: 6.53, label: "Windows 8.1" },
-        { y: 2.45, label: "Linux" },
-        
+        { y: valoresY[0] , label: "Strength" },
+        { y: valoresY[1] , label: "Speed" },
+        { y: valoresY[2] , label: "Intelligence " },
+        { y: valoresY[3] , label: "Durability " },
+        { y: valoresY[4] , label: "Power" },
+        { y: valoresY[5] , label: "Combat"  },
       ] //dataPoints
     }]
   };
@@ -87,4 +82,11 @@ const pintarElementos = data => {
 
 });//document ready
 
-//[ ]
+
+//[""]
+// { y: "Combat" , label: data.powerstats.combat  },
+// { y: "Durability", label: data.powerstats.durability },
+// { y: "Intelligence" , label: data.powerstats.intelligence },
+// { y: "Power", label: data.powerstats.power },
+// { y: "Speed", label:data.powerstats.speed  },
+// { y: "Strength", label: data.powerstats.strength },
